@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    #wing {
+        -webkit-animation: flap 4s infinite linear alternate;
+    }
+
+    .nav-dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply text-sm sm:text-xs font-semibold py-3 px-6 rounded-full text-center
+    }
+    .btn-primary {
+        @apply text-white bg-gradient-to-tr from-violet-900  to-orange-500 hover:bg-gradient-to-t
+    }
+    .btn-light {
+        @apply text-slate-700 bg-slate-200 hover:bg-slate-100
+    }
+    .btn-outline-light {
+        @apply text-slate-200 border border-slate-200 hover:bg-slate-200 hover:text-slate-700
+    }
+
+    .card {
+        @apply overflow-hidden flex flex-col rounded-lg
+    }
+    .card .card-header, .card .card-body {
+        @apply p-4
+    }
+    .card-primary {
+        @apply bg-yellow-400 bg-opacity-25 border border-yellow-300
+    }
+    .card-secondary {
+        @apply bg-gray-500 bg-opacity-25 border border-gray-800 text-white
+    }
+    .card.card-secondary .card-header {
+        @apply bg-gray-500 bg-opacity-30
+    }
+
+    .form-group {
+        @apply flex flex-col gap-2
+    }
+    .form-label {
+        @apply text-xs font-semibold
+    }
+    .form-control {
+        @apply px-3 py-2 text-sm w-full border border-gray-600 rounded-md bg-white bg-opacity-5 focus:bg-opacity-100 focus:text-gray-900 focus:outline-none
+    }
+
+    .bottom-items {
+        @apply text-xs text-slate-200 hover:text-white
+    }
+}
