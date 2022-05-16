@@ -73,9 +73,9 @@
 
                         <div class="form-group">
                             <label for="TokenAddress" class="form-label">Token Address</label>
-                            <input type="text" class="form-control" oninput="ActiveTokenContract()"
+                            <input type="text" id="TokenAddress" class="form-control" oninput="ActiveTokenContract()"
                                 aria-describedby="emailHelp" placeholder="for example: 0x122..aef">
-                            <small id="balanceOf" class="text-muted"></small>
+                            <small id="balanceOf" class="text-gray-400 text-xs"></small>
                             <img id="loader2" src="loading.gif" class="hidden"></img>
                             <button id="approveThisButton" onclick="approveThis(contractAdress);return false;"
                                 class="hidden btn btn-primary">Approve</button>
@@ -105,7 +105,9 @@
                         </div>
                         <div id="SendDiffAmountDiv">
                             <input type="file" id="fileUpload" class="form-control">
-                            <a href="example.csv" class="text-xs text-blue-400 hover:text-blue-300 hover:underline underline-offset-1">Download example
+                            <a href="example.csv"
+                                class="text-xs text-blue-400 hover:text-blue-300 hover:underline underline-offset-1">Download
+                                example
                                 csv</a>
                         </div>
 
@@ -119,20 +121,26 @@
 
                         <div class="form-group" id="container-3-radio-buttons-choice">
                             <div class="flex gap-2 items-center">
-                                <input type="radio" name="Medium" id="one-variable-equations" onclick="checkRadio(name)">
+                                <input type="radio" name="Medium" id="one-variable-equations"
+                                    onclick="checkRadio(name)">
                                 <label for="one-variable-equations" class="text-sm flex gap-2 items-center">
                                     <img src="/img/high.png" alt="high" class="w-6">
                                     Medium gas fee
                                 </label>
                             </div>
                             <div class="flex gap-2 items-center">
-                                <input type="radio" name="low" id="multiple-variable-equations" onclick="checkRadio(name)">
+                                <input type="radio" name="low" id="multiple-variable-equations"
+                                    onclick="checkRadio(name)">
                                 <label for="multiple-variable-equations" class="text-sm flex gap-2 items-center">
                                     <img src="/img/low.png" alt="high" class="w-6">
                                     Low gas fee
                                 </label>
                             </div>
                         </div>
+
+                        <button id="MultiSendButton" type="button" class="hidden btn btn-primary">Multi Send</button>
+
+                        <div id="dvCSV"></div>
 
                     </div>
                 </form>
